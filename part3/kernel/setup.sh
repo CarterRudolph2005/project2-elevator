@@ -72,7 +72,8 @@ echo ">> Syscall edits verified"
 #    drop Ubuntu's certificates and debug info (slow + needs extra tools)
 cp "/boot/config-$(uname -r)" .config
 make olddefconfig
-yes '' | make localmodconfig
+# (yes exits with SIGPIPE when make stops reading; don't let pipefail kill the script)
+(yes '' || true) | make localmodconfig
 scripts/config --set-str SYSTEM_TRUSTED_KEYS "" \
 	--set-str SYSTEM_REVOCATION_KEYS "" \
 	--disable DEBUG_INFO_BTF \
