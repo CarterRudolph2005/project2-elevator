@@ -1,0 +1,17 @@
+# Build output (rubric: no binaries, executables, or modules)
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+*.order
+*.symvers
+.*.cmd
+.tmp_versions/
+part1/empty
+part1/part1
+part3/tests/elevator-test/producer
+part3/tests/elevator-test/consumer
+part3/tests/system-calls-test/test-syscalls
+.DS_Store
