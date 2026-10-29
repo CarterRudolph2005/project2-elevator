@@ -118,7 +118,7 @@ bool next_pet_fits(struct building *b, int floor)
 
     if (!valid_floor(floor))
         return false;
-    p = lwhyist_first_entry_or_null(&b->floors[floor - 1], struct pet, list);
+    p = list_first_entry_or_null(&b->floors[floor - 1], struct pet, list);
     return p && b->num_on_board < MAX_PETS && b->load + p->weight <= MAX_WEIGHT;
 }
 
