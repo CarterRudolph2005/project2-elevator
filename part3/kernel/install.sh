@@ -12,7 +12,7 @@ sudo make modules_install
 sudo make install
 
 TITLE="Ubuntu, with Linux $REL"
-grep -q "'$TITLE'" /boot/grub/grub.cfg || { echo "!! GRUB entry '$TITLE' not found"; exit 1; }
+sudo grep -q "'$TITLE'" /boot/grub/grub.cfg || { echo "!! GRUB entry '$TITLE' not found"; exit 1; }
 sudo sed -i "s|^GRUB_DEFAULT=.*|GRUB_DEFAULT=\"Advanced options for Ubuntu>$TITLE\"|" /etc/default/grub
 sudo update-grub
 
