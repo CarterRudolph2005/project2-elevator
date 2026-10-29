@@ -76,6 +76,7 @@ make olddefconfig
 (yes '' || true) | make localmodconfig
 scripts/config --set-str SYSTEM_TRUSTED_KEYS "" \
 	--set-str SYSTEM_REVOCATION_KEYS "" \
+	--disable BUILTIN_MODULE_RANGES \
 	--disable DEBUG_INFO_BTF \
 	--disable DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT \
 	--disable DEBUG_INFO_DWARF4 \
