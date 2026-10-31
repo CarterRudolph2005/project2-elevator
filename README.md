@@ -152,7 +152,7 @@ Each member records their contributions here.
   spec.
 
 **Use of AI**
-- Used Claude to write `syscalls.c`, the kernel `setup.sh` and `install.sh` scripts,
+- Used Claude to optimize `syscalls.c`, the kernel `setup.sh` and `install.sh` scripts,
   `pet_list.c`, and the pet list test module, and to debug kernel build errors. I wrote
   `pet_list.h`, went through `pet_list.c` function by function, ran and verified every step on
   the VM (`uname -r`, `syscheck`, the pet list test), and reviewed the code to make sure I
